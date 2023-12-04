@@ -12,16 +12,7 @@ namespace LinkedInTests.StepDefinitions
     {
         public static IWebDriver? driver;
         private IWebElement? passwordInput;
-        //[BeforeScenario]
-        //public void InitializeBrowser()
-        //{
-
-        //}
-        //[AfterScenario]
-        //public void CleanupBrowser()
-        //{
-        //    driver?.Quit();
-        //}
+       
         [BeforeFeature]
         public static void InitializeBrowser()
         {
@@ -32,11 +23,7 @@ namespace LinkedInTests.StepDefinitions
         {
             driver.Url = "https://www.linkedin.com/";
         }
-        //[BeforeScenario]
-        //public static void LoadUrl()
-        //{
-        //    driver.Url = "https://www.linkedin.com/";
-        //}
+        
         [AfterFeature]
         public static void Cleanup()
         {
