@@ -34,5 +34,10 @@ namespace BunnyCartBDD.Utilities
                 Log.Error($"Test failed for {testName}\nException: {errorMessage}");
             }
         }
+        public static void ScrollIntoView(IWebDriver driver, IWebElement element)
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("arguments[0].scrollIntoView(true);", element);
+        }
     }
 }
